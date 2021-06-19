@@ -1,14 +1,13 @@
 <?
 
-	$name = $_POST['name'];
-	$email = $_POST['email'];
-
-	$dbh = new PD0('mysql:host=localhost;dbname=cy70845_db', 'cy70845_db', 'cy70845_db')
-	$stmt = $dbh->prepare("INSERT INTO `order`(`time`, name, email)
-		VALUES (NOW()), :name, :email)");
-	$stmt->bindParam(':name', $name);
-	$stmt->bindParam(':email', $email);
+	$FIO = $_POST['FIO'];
+	$score = $_POST['score'];
+	$ball = $_POST['ball'];
+	$dbh = new PDO('mysql:host=localhost;dbname=cb95298_db', 'cb95298_db', '5frWSN28y7we');
+	$stmt = $dbh->prepare("INSERT INTO `order`(`date`, FIO, score, ball)
+		VALUES (NOW(), :FIO, :score, :ball)");
+	$stmt->bindParam(':FIO', $FIO);
+	$stmt->bindParam(':score', $score);
+	$stmt->bindParam(':ball', $ball);
 	$stmt->execute();	
-
-
 	echo '1';
