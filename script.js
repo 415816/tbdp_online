@@ -1,9 +1,9 @@
     const butt = document.querySelector('.generate');
     const result = document.querySelector('.result');
-    const cheets = document.querySelector('.cheets');
+    //const cheets = document.querySelector('.cheets');
     const clos = document.querySelector('.clos');
     let score;
-    const trueAns = document.querySelector('.trueAns'); 
+    //const trueAns = document.querySelector('.trueAns'); 
     document.querySelector('body').oncontextmenu = () => {return false};
     let q2;                               
     let q3;
@@ -78,6 +78,12 @@
     const showMU2 = document.querySelector('.showMU2');
     const MU1Container = document.querySelector('.MU1-container');
     const MU2Container = document.querySelector('.MU2-container');
+
+    let time = 35 * 60;
+    let r = document.getElementById('r');
+    let tmp = time;
+
+
     btnCalcStart.onclick = () => {
       calcSumm.innerHTML = parseFloat(
         (
@@ -120,12 +126,10 @@
       }
     };                
     result.onclick = check;
-    cheets.onclick = () => {if (passAnsw.value == 45) answers();}
+    /* cheets.onclick = () => {if (passAnsw.value == 45) answers();} */
     clos.onclick = () => {if (passClos.value == 12) closMess();}
-    trueAns.onclick = () => {if (passAnsw.value == 78) displayTrueAnswers();}
-    let time = 35 * 60;
-    let r = document.getElementById('r');
-    let tmp = time;
+   /*  trueAns.onclick = () => {if (passAnsw.value == 78) displayTrueAnswers();} */
+
     function formQuest() {
     setInterval(function(){
         let c = tmp--
@@ -323,7 +327,7 @@ function closMess() {
     passClos.value = '';
     block.style.display = 'none';
 }
-function answers() {
+/* function answers() {
     passAnsw.value = '';
     console.log('Правильные ответы: ');
     console.log('1. Координата');
@@ -484,4 +488,4 @@ function displayTrueAnswers(){
     if ((inp13.value == 'Д' || inp13.value == 'д') && s131.innerHTML == 'процесс движения поезда постоянно находился в опасном состоянии') {document.querySelector('.qu13').classList.toggle('trueAnswer');}
     if ((inp13.value == 'Г' || inp13.value == 'г') && s131.innerHTML == 'произошел опасный отказ, но поражающие факторы не возникли') {document.querySelector('.qu13').classList.toggle('trueAnswer');}
 
-}
+} */
