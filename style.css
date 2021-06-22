@@ -177,13 +177,14 @@ div div div {
     padding: 0;
     justify-content: space-between;
     margin-top: 0;
+    background: none;
     
 }
 .btn{
     margin: 0;
     padding: 0;
     margin-top: 5px;
-
+    
 }
 
 .calcDiv, .calcSumm, .calcSubtraction, .calcMultipl, .calcDevide{
@@ -199,10 +200,12 @@ div div div {
     display: none;
     width: 560px;
     flex-wrap: wrap;
+    margin: 0;
 }
 
 .showCalculator, .showMU1, .showMU2{
-    margin: 0;
+    margin: 10px 0;
+    width: 750px;
 }
 
 .calcInp{
@@ -231,6 +234,7 @@ textarea{
     padding: 0;
     justify-content: space-between;
     margin-top: 0;
+    background: none;
 }
 
 .MU1 img, .MU2 img {
@@ -251,3 +255,6 @@ textarea{
     margin: 0;
     width: 25px;
 } 
+.result{
+    width: 750px;
+}
